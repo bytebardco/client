@@ -172,7 +172,8 @@ class Client {
         return await this.request(
             `/blog?action=reindex`,
             {
-                method: 'POST'
+                method: 'POST',
+                body: urls ? JSON.stringify({ urls }) : undefined
             }
         );
     }
